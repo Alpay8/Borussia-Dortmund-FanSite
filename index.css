@@ -1,0 +1,180 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+
+body {margin: 40px;
+  display: block;
+  font-family:'Open Sans', sans-serif;
+}
+
+  
+  aside {grid-area:sidebar; font-size:x-large }
+  
+  main {
+    grid-area: main;
+    line-height: 175%; /*leading*/
+ }
+
+ ul, ol{
+  font-weight: bolder;
+ }
+ 
+ main p {
+  font-weight: bolder;
+ }
+
+  
+  header {grid-area: header; 
+          box-shadow: 0px 0px 30px 5px rgb(0, 0, 0) ;}
+  
+  footer {grid-area: footer; 
+  box-shadow: 0px 0px 30px 5px rgb(0, 0, 0);  /*shadow*/
+  text-align: center;
+  background: linear-gradient(345deg,rgb(253,255,0), rgb(228,228,161)115%); /*Linear Gradient*/
+
+ }
+
+ footer p, h2{
+  display: inline;   /*change block to inline element*/
+ }
+
+ main img{
+  position: relative; /*********relative positioning**********/
+  width: 30%;
+  float: right;
+  border: 3px solid black;
+  background-color: rgb(228, 228, 161);
+  border: rgb(228, 228, 161);
+  padding: 0; /*defined padding*/
+  margin: auto; /*define margin*/
+  border: 0; /*define border*/
+  border-radius: 5%; /* create rounded element*/ 
+  
+ }
+
+  .wrapper {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: 1fr 3fr 3fr;
+      grid-template-areas:
+      "header header  header"
+      "sidebar main main "
+      "footer  footer  footer";
+      background-color: rgb(228,228,161);
+      color: black;
+  }
+
+   aside img{
+      width: 200px; 
+      height: 200px; 
+      position:  fixed; /*fixed positioning*/
+      filter: drop-shadow(0.3rem 0.3rem 0.3rem rgba(0,0,0,20)); /*filter*/
+      opacity: 50%; /*semi-transparent object*/
+      transform: translateX(-25px); /*transform object*/
+    }
+  
+  
+  header, footer {background-color: rgba(253, 225, 0, 1); /*rgba* and background color */
+    
+  }
+
+header p{
+    font-size:250% ;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    width: 50px;
+    padding: 0; 
+    float: left;
+    margin: 20px; 
+    border: 0;  
+  }
+
+  header nav{
+    width: 75%;
+    float: right;
+  }
+
+
+  nav.horizontalNavigation > ul > li {
+    display: block;
+    float: left;
+    width: 20%;
+
+ }
+ 
+ nav.horizontalNavigation a {
+    background-color: rgb(0, 0, 0);
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;  /*font-size change*/
+    line-height: 1.5em;
+    text-align: center;
+    
+ }  
+ 
+ nav.horizontalNavigation a:link,      /*Pseudo class*/
+ nav.horizontalNavigation a:visited {
+    color: rgba(253, 225, 0, 1);
+
+ }
+ 
+ nav.horizontalNavigation a:hover, 
+ nav.horizontalNavigation a:active {
+    background-color: rgba(138, 131, 73, 1);
+  } 
+
+ nav.horizontalNavigation a:hover::after     /*Pseudo element*/
+ {       
+  background-color: rgba(138, 131, 73, 1);
+ }
+
+
+
+
+ html {
+    background-color: rgb(228, 228, 161);
+    background-color: hsl(60, 55%, 76%); /*progressive enhancement because I am placing a code that is supported by older browsers too*/
+    color: rgb(51, 51, 51);
+    font-family: Arial, Helvetica, sans-serif; /*typeface change*/
+    letter-spacing: 1px; /*tracking*/
+    kerning: auto;  /*kerning*/
+    font-kerning: none; /*kerning*/
+    word-spacing: 5px; /*word-spacing*/
+      }
+
+     aside figure{
+      margin: 20px auto 0px;
+      width: 80%;
+     }
+
+     footer p{
+      font-size: x-large;
+     }
+     footer img{
+      position: absolute; /*absolute positioning*/
+      bottom: -200;
+      left: 0;
+      top: 600;
+      opacity: 70%;
+      transform: translateX(40px);
+     } /*I know this footer img section it looks weird, but it works :) 
+        -Image map on bvb.teams.html inside the U23 Teams img*/
+
+
+
+
+
+
+
+
+        /*
+        relative positioning on css row 42
+        Every page now has an H1 and i have exchanged paragraphs that had any h tag with a p tag and have modified p in the css
+        I have taken away the px on the img tags
+        I have used embedded/inline style at page bvb-legend.html row 123-130.
+        I modified word spacing css line 143, letter-spacing line 140, and kerning (font-kerning) on line 142.
+        I called the imported google font on lines
+                                                  import line 2 on css 
+                                                  called it on body of html on line 7 of css
+        */
